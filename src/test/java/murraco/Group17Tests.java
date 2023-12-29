@@ -71,17 +71,17 @@ public class Group17Tests {
     }
 
     @Test
+    public void testMergeSortSorted() {
+        final Integer[] data = {1, 2, 3, 4, 5, 6, 7};
+        MergeSort.mergeSort(data);
+        assertEquals("[1, 2, 3, 4, 5, 6, 7]", Arrays.toString(data));
+    }
+
+    @Test
     public void testHeapSortNegativeValues() {
         final Integer[] data = {-43, -531, -42, -4, 0};
         Heapsort.heapSort(data);
         assertEquals("[-531, -43, -42, -4, 0]", Arrays.toString(data));
-    }
-
-    @Test
-    public void testMergeSortNearlySorted() {
-        final Integer[] data = {1, 2, 3, 4, 5, 6, 7, 0};
-        MergeSort.mergeSort(data);
-        assertEquals("[0, 1, 2, 3, 4, 5, 6, 7]", Arrays.toString(data));
     }
 
     @Test
